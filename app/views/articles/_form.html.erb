@@ -10,21 +10,45 @@
 
 <% end %>
 
-<%= form_for @article do |a| %>
-    <p>
-        <%= a.label :title %> <br/>
-        <%= a.text_field :title %>
-        
-    </p>
+<div class="row">
+    <div class="col-md-12">
     
-    <p>
-        <%= a.label :description %> <br/>
-        <%= a.text_area :description %>
+    <%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |a| %>
+     <div class="form-group">  
+         <div class="control-label col-sm-2">
+                <%= a.label :title %>
+            </div>
+            
+         <div class="col-sm-8">
+            
+            <%= a.text_field :title, class: "form-control", placeholder: "Title of Article", autofocus: true %>
+         </div>
+     </div> 
         
-    </p>
+        
+        
+        <div class="form-group">  
+         <div class="control-label col-sm-2">
+            <%= a.label :description %> 
+         </div>
+         
+         <div class="col-sm-8">
+            <%= a.text_area :description, rows: 10, class: "form-control", placeholder: "Description", autofocus: true %>
+         </div>
+         
+        </div>
     
-    <p>
-        <%= a.submit %>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+            <%= a.submit class: "btn btn-primary bt lg" %>
+            </div>
+        </div>
         
-    </p>
-<% end %>
+        <% end %>
+        
+        <div class="col-xs-4 col-xs-offset-4">
+            <%= link_to 'Cancel and return to Articles', articles_path %>
+        </div>
+    
+    </div>
+</div>
