@@ -36,6 +36,23 @@ $navbar-default-bg: #FFD700;
     font-family: verdana;
 }
 
+.article-actions {
+    border-top: 1px;
+    padding-top: 5px;
+    
+}
+
+.article-title {
+    font-weight: bold;
+    font-size: 1.5em;    
+}
+
+.article-body {
+    border-top: 1px solid #eaeaea;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .footer {
     margin-top: 45px;
     padding-top: 5px;
@@ -54,4 +71,8 @@ $navbar-default-bg: #FFD700;
 .footer ul {
     float: right;
     list-style: none;
+}
+
+.description {
+    margin-top: 0;
 }
